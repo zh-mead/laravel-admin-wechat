@@ -1,7 +1,7 @@
 # Laravel-admin-wechat 安装手册
 
 ## 简介
-> 测试版本为：laravel5.5 + laravel-admin1.6
+> 测试版本为：laravel5.5 + laravel-admin1.6 **（安装前请先安装好 laravel-admin）**
 
 ## 步骤
 
@@ -18,7 +18,7 @@
 ]
 ~~~ 
 
-* 安装 Wechat 依赖
+* 安装 Wechat 扩展包
 
 ~~~bash
 $ composer require laravel-admin-ext/wechat
@@ -30,13 +30,13 @@ $ composer require laravel-admin-ext/wechat
 $ php artisan vendor:publish --tag=laravel-admin-wechat
 ~~~
 
-* 创建数据库
+* 创建数据表
 
 ~~~bash
 $ php artisan migrate
 ~~~
 
-* 导入菜单
+* 添加菜单
 
 ~~~bash
 $ php artisan admin:import wechat
@@ -46,7 +46,7 @@ $ php artisan admin:import wechat
 
 ## 微信网页授权用法
 
-* 添加中间件
+* 添加中间件 Kernel.php
 
 ~~~php
 protected $routeMiddleware = [
@@ -55,7 +55,7 @@ protected $routeMiddleware = [
 ];
 ~~~
 
-* 配置 Auth.php
+* 配置 config下的 auth.php 文件
 
 ~~~php
 ....
@@ -76,7 +76,7 @@ protected $routeMiddleware = [
 ],
 ~~~
 
-* 路由 web.php
+* 路由的使用 web.php
 
 ~~~php
 Route::group(['middleware' => ['web', 'wechat.auth']], function () {
@@ -91,7 +91,4 @@ use Illuminate\Support\Facades\Auth;
 .....
 Auth::guard('wechat')->user()//获取用户信息
 ~~~
-
-
-
 
