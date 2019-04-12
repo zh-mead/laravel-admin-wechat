@@ -8,7 +8,7 @@
 * 安装 Wechat 扩展包
 
 ~~~bash
-$ composer require z-xv/laravel-admin-ext-wechat
+$ composer require zh-mead/laravel-admin-ext-wechat
 ~~~
 
 * 发布静态资源
