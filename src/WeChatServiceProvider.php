@@ -2,7 +2,7 @@
 
 namespace ZhMead\WeChat;
 
-use ZhMead\Admin\Facades\Admin;
+use Encore\Admin\Facades\Admin;
 use ZhMead\WeChat\Database\WeChatTablesSeeder;
 use ZhMead\WeChat\Http\Controllers\WeChatServerController;
 use Illuminate\Support\ServiceProvider;
