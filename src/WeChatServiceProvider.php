@@ -34,7 +34,6 @@ class WeChatServiceProvider extends ServiceProvider
             Admin::css('/vendor/laravel-admin-ext/wechat/wechat.css');
         });
 
-
         // 设置前台路由
         $this->app['router']->any('/wechat', WeChatServerController::class . '@serve');
     }

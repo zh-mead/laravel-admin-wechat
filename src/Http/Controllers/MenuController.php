@@ -40,7 +40,6 @@ class MenuController extends Controller
             }
         }
 
-
         $types = Menu::$typeMaps;
 
         return $content->header('自定义菜单管理')
