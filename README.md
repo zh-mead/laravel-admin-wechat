@@ -42,13 +42,21 @@ $ php artisan migrate
 $ php artisan admin:import wechat
 ~~~
 
-* 安装完成
+* 安装完成，配置 env 文件
+
+~~~
+.....
+WECHAT_DEBUG = false //线下配置，上线的话请配置
+~~~
+
+
 
 ## 微信网页授权用法
 
 * 添加中间件 Kernel.php
 
 ~~~php
+// app/Http/Kernel.php
 protected $routeMiddleware = [
 	......
    'wechat.auth' => Encore\WeChat\Middleware\WeChatAuthenticate::class,
@@ -59,6 +67,7 @@ protected $routeMiddleware = [
 
 ~~~php
 ....
+// config/auth.php
 'guards' => [
 	......
 	'wechat' => [
@@ -76,9 +85,30 @@ protected $routeMiddleware = [
 ],
 ~~~
 
+* 配置注册事件
+
+~~~php
+// app/Providers/EventServiceProvider.php
+use Encore\WeChat\Events\Subscribe;
+use Encore\WeChat\Events\WebAuthenticate;
+use Encore\WeChat\Listeners\RegisterWeChatFan;
+......
+protected $listen = [
+	.....
+	Subscribe::class => [
+		RegisterWeChatFan::class
+	],
+	WebAuthenticate::class => [
+		RegisterWeChatFan::class
+	],
+	.....
+];
+~~~
+
 * 路由的使用 web.php
 
 ~~~php
+// routes/web.php
 Route::group(['middleware' => ['web', 'wechat.auth']], function () {
 	//这里写需要微信网页授权的路由
 });

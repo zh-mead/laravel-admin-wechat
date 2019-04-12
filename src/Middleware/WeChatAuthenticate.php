@@ -40,7 +40,7 @@ class WeChatAuthenticate
             $account || $account = 'default';
         }
 
-        if (App::environment('local')) {
+        if (!env('WECHAT_DEBUG', true)) {
             Auth::guard('wechat')->loginUsingId(1);
         }
 

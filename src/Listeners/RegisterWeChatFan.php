@@ -8,9 +8,7 @@
 
 namespace Encore\WeChat\Listeners;
 
-use Encore\WeChat\Events\Subscribe;
 use Encore\WeChat\Events\WebAuthenticate;
-use Encore\WeChat\Models\Fan;
 use Encore\WeChat\Repositories\FanRepository;
 use Illuminate\Support\Facades\Auth;
 

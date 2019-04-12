@@ -29,7 +29,7 @@ class MenuController extends Controller
         $menus = $menuService->menu();
         $events = Event::pluck('name', 'key')->toArray();
         $news = [];
-        if (App::environment('production')) {
+        if (env('WECHAT_DEBUG', true)) {
             $lists = app('wechat.official_account')->material->list('news');
             $news = [];
             foreach ($lists['item'] as $list) {
@@ -122,12 +122,17 @@ class MenuController extends Controller
 
     public function sync(MenuService $menuService)
     {
-        $re = $menuService->sync();
-        if ($re) {
-            admin_toastr('菜单发布成功！');
+        if (env('WECHAT_DEBUG', true)) {
+            $re = $menuService->sync();
+            if ($re) {
+                admin_toastr('菜单发布成功！');
+            } else {
+                admin_toastr('菜单发布失败！', 'fail');
+            }
         } else {
-            admin_toastr('菜单发布失败！', 'fail');
+            admin_toastr('本地测试不能同步！', 'fail');
         }
+
         return app('redirect')->to('/admin/wechat/menus');
     }
 }
