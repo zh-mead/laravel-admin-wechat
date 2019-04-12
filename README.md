@@ -33,7 +33,7 @@ $ php artisan admin:import wechat
 
 ~~~
 .....
-WECHAT_DEBUG = false //线下配置，上线的话请配置
+WECHAT_DEBUG = false //线下配置，上线的话请配置true(可省略)
 ~~~
 
 * 添加 CSRF 白名单
