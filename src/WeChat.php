@@ -2,7 +2,7 @@
 
 namespace ZhMead\WeChat;
 
-use ZhMead\Admin\Extension;
+use Encore\Admin\Extension;
 use Illuminate\Support\Facades\DB;
 
 class WeChat extends Extension
