@@ -36,8 +36,17 @@ $ php artisan admin:import wechat
 WECHAT_DEBUG = false //线下配置，上线的话请配置
 ~~~
 
+* 添加 CSRF 白名单
 
-
+~~~php
+// app/Http/Middleware/VerifyCsrfToken.php
+protected $except = [
+    ......
+    'wechat',
+    'admin/wechat*',
+    .....
+];
+~~~
 ## 微信网页授权用法
 
 * 添加中间件 Kernel.php
@@ -46,7 +55,7 @@ WECHAT_DEBUG = false //线下配置，上线的话请配置
 // app/Http/Kernel.php
 protected $routeMiddleware = [
 	......
-   'wechat.auth' => Encore\WeChat\Middleware\WeChatAuthenticate::class,
+   'wechat.auth' => \Encore\WeChat\Middleware\WeChatAuthenticate::class,
 ];
 ~~~
 
