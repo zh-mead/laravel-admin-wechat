@@ -5,23 +5,10 @@
 
 ## 步骤
 
-* 下载安装包，复制目录到 app/Admin/Extensions/laravel-admin-ext/wechat
-
-* 配置 composer.json
-
-~~~
-"repositories": [
-    {
-        "type": "path",
-        "url": "app/Admin/Extensions/laravel-admin-ext/wechat"
-    }
-]
-~~~ 
-
 * 安装 Wechat 扩展包
 
 ~~~bash
-$ composer require laravel-admin-ext/wechat
+$ composer require z-xv/laravel-admin-ext-wechat
 ~~~
 
 * 发布静态资源
