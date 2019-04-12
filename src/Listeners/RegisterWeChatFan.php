@@ -6,10 +6,10 @@
  * Time: 11:43 AM
  */
 
-namespace Encore\WeChat\Listeners;
+namespace ZhMead\WeChat\Listeners;
 
-use Encore\WeChat\Events\WebAuthenticate;
-use Encore\WeChat\Repositories\FanRepository;
+use ZhMead\WeChat\Events\WebAuthenticate;
+use ZhMead\WeChat\Repositories\FanRepository;
 use Illuminate\Support\Facades\Auth;
 
 class RegisterWeChatFan

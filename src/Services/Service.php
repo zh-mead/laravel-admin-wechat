@@ -3,7 +3,7 @@
  *
  */
 
-namespace Encore\WeChat\Services;
+namespace ZhMead\WeChat\Services;
 
 class Service
 {

@@ -6,9 +6,9 @@
  * Time: 2:00 PM
  */
 
-namespace Encore\WeChat\Repositories;
+namespace ZhMead\WeChat\Repositories;
 
-use Encore\WeChat\Models\Fan;
+use ZhMead\WeChat\Models\Fan;
 
 class FanRepository
 {

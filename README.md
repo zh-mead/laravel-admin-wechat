@@ -55,7 +55,7 @@ protected $except = [
 // app/Http/Kernel.php
 protected $routeMiddleware = [
 	......
-   'wechat.auth' => \Encore\WeChat\Middleware\WeChatAuthenticate::class,
+   'wechat.auth' => \ZhMead\WeChat\Middleware\WeChatAuthenticate::class,
 ];
 ~~~
 
@@ -76,7 +76,7 @@ protected $routeMiddleware = [
 	.....
 	'fans' => [
 		'driver' => 'eloquent',
-		'model' => \Encore\WeChat\Models\Fan::class,
+		'model' => \ZhMead\WeChat\Models\Fan::class,
 	],
 ],
 ~~~
@@ -85,9 +85,9 @@ protected $routeMiddleware = [
 
 ~~~php
 // app/Providers/EventServiceProvider.php
-use Encore\WeChat\Events\Subscribe;
-use Encore\WeChat\Events\WebAuthenticate;
-use Encore\WeChat\Listeners\RegisterWeChatFan;
+use ZhMead\WeChat\Events\Subscribe;
+use ZhMead\WeChat\Events\WebAuthenticate;
+use ZhMead\WeChat\Listeners\RegisterWeChatFan;
 ......
 protected $listen = [
 	.....

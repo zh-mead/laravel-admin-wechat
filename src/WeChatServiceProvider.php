@@ -1,10 +1,10 @@
 <?php
 
-namespace Encore\WeChat;
+namespace ZhMead\WeChat;
 
-use Encore\Admin\Facades\Admin;
-use Encore\WeChat\Database\WeChatTablesSeeder;
-use Encore\WeChat\Http\Controllers\WeChatServerController;
+use ZhMead\Admin\Facades\Admin;
+use ZhMead\WeChat\Database\WeChatTablesSeeder;
+use ZhMead\WeChat\Http\Controllers\WeChatServerController;
 use Illuminate\Support\ServiceProvider;
 
 class WeChatServiceProvider extends ServiceProvider

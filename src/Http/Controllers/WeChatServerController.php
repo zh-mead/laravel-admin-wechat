@@ -1,9 +1,9 @@
 <?php
 
-namespace Encore\WeChat\Http\Controllers;
+namespace ZhMead\WeChat\Http\Controllers;
 
-use Encore\WeChat\Events\Subscribe;
-use Encore\WeChat\Models\Event;
+use ZhMead\WeChat\Events\Subscribe;
+use ZhMead\WeChat\Models\Event;
 use Illuminate\Routing\Controller;
 
 class WeChatServerController extends Controller

@@ -1,8 +1,8 @@
 <?php
 
-namespace Encore\WeChat;
+namespace ZhMead\WeChat;
 
-use Encore\Admin\Extension;
+use ZhMead\Admin\Extension;
 use Illuminate\Support\Facades\DB;
 
 class WeChat extends Extension

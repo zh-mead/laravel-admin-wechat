@@ -6,16 +6,16 @@
  * Time: 8:23 PM
  */
 
-namespace Encore\WeChat\Http\Controllers;
+namespace ZhMead\WeChat\Http\Controllers;
 
-use Encore\Admin\Controllers\HasResourceActions;
-use Encore\Admin\Form;
-use Encore\Admin\Grid;
-use Encore\Admin\Layout\Content;
-use Encore\Admin\Layout\Row;
-use Encore\WeChat\Models\Event;
-use Encore\WeChat\Models\Menu;
-use Encore\WeChat\Services\MenuService;
+use ZhMead\Admin\Controllers\HasResourceActions;
+use ZhMead\Admin\Form;
+use ZhMead\Admin\Grid;
+use ZhMead\Admin\Layout\Content;
+use ZhMead\Admin\Layout\Row;
+use ZhMead\WeChat\Models\Event;
+use ZhMead\WeChat\Models\Menu;
+use ZhMead\WeChat\Services\MenuService;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\App;

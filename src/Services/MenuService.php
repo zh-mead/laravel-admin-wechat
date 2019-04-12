@@ -6,9 +6,9 @@
  * Time: 10:31 AM
  */
 
-namespace Encore\WeChat\Services;
+namespace ZhMead\WeChat\Services;
 
-use Encore\WeChat\Models\Menu;
+use ZhMead\WeChat\Models\Menu;
 
 class MenuService extends Service
 {

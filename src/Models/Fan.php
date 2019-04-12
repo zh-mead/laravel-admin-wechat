@@ -6,7 +6,7 @@
  * Time: 8:07 PM
  */
 
-namespace Encore\WeChat\Models;
+namespace ZhMead\WeChat\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Model;

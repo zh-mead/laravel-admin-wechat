@@ -9,10 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Encore\WeChat\Middleware;
+namespace ZhMead\WeChat\Middleware;
 
 use Closure;
-use Encore\WeChat\Events\WebAuthenticate;
+use ZhMead\WeChat\Events\WebAuthenticate;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Event;

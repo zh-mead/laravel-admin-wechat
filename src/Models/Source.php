@@ -6,7 +6,7 @@
  * Time: 8:11 PM
  */
 
-namespace Encore\WeChat\Models;
+namespace ZhMead\WeChat\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

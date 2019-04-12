@@ -1,8 +1,8 @@
 <?php
 
-namespace Encore\WeChat\Http\Controllers;
+namespace ZhMead\WeChat\Http\Controllers;
 
-use Encore\Admin\Layout\Content;
+use ZhMead\Admin\Layout\Content;
 use Illuminate\Routing\Controller;
 
 class WeChatController extends Controller

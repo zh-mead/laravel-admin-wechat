@@ -6,9 +6,9 @@
  * Time: 8:10 PM
  */
 
-namespace Encore\WeChat\Models;
+namespace ZhMead\WeChat\Models;
 
-use Encore\Admin\Form\Field\Select;
+use ZhMead\Admin\Form\Field\Select;
 use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model

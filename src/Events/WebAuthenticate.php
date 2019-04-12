@@ -6,7 +6,7 @@
  * Time: 11:50 AM
  */
 
-namespace Encore\WeChat\Events;
+namespace ZhMead\WeChat\Events;
 
 class WebAuthenticate
 {

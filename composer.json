@@ -1,10 +1,10 @@
 {
-    "name": "z-xv/laravel-admin-ext-wechat",
-    "description": "description...",
+    "name": "zh-mead/laravel-admin-ext-wechat",
+    "description": "laravel-admin-ext-wechat",
     "type": "library",
-    "keywords": ["laravel-admin", "extension"],
+    "keywords": ["laravel-admin", "extension", "wechat"],
     "homepage": "https://github.com/laravel-admin-ext/wechat",
-    "version": "1.0.2",
+    "version": "1.0.0",
     "license": "MIT",
     "authors": [
         {
@@ -22,13 +22,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Encore\\WeChat\\": "src/"
+            "ZhMead\\WeChat\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Encore\\WeChat\\WeChatServiceProvider"
+                "ZhMead\\WeChat\\WeChatServiceProvider"
             ]
 
         }
