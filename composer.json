@@ -1,5 +1,5 @@
 {
-    "name": "laravel-admin-ext/wechat",
+    "name": "z-xv/laravel-admin-ext-wechat",
     "description": "description...",
     "type": "library",
     "keywords": ["laravel-admin", "extension"],
