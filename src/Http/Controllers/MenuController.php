@@ -8,11 +8,11 @@
 
 namespace ZhMead\WeChat\Http\Controllers;
 
-use ZhMead\Admin\Controllers\HasResourceActions;
-use ZhMead\Admin\Form;
-use ZhMead\Admin\Grid;
-use ZhMead\Admin\Layout\Content;
-use ZhMead\Admin\Layout\Row;
+use Encore\Admin\Controllers\HasResourceActions;
+use Encore\Admin\Form;
+use Encore\Admin\Grid;
+use Encore\Admin\Layout\Content;
+use Encore\Admin\Layout\Row;
 use ZhMead\WeChat\Models\Event;
 use ZhMead\WeChat\Models\Menu;
 use ZhMead\WeChat\Services\MenuService;

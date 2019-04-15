@@ -8,10 +8,10 @@
 
 namespace ZhMead\WeChat\Http\Controllers;
 
-use ZhMead\Admin\Controllers\HasResourceActions;
-use ZhMead\Admin\Form;
-use ZhMead\Admin\Grid;
-use ZhMead\Admin\Layout\Content;
+use Encore\Admin\Controllers\HasResourceActions;
+use Encore\Admin\Form;
+use Encore\Admin\Grid;
+use Encore\Admin\Layout\Content;
 use ZhMead\WeChat\Models\Event;
 use ZhMead\WeChat\Models\Fan;
 use Illuminate\Routing\Controller;
