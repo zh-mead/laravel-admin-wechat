@@ -12,7 +12,7 @@ use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
-use Encore\WeChat\Models\Event;
+use ZhMead\WeChat\Models\Event;
 use Illuminate\Routing\Controller;
 
 class EventController extends Controller
