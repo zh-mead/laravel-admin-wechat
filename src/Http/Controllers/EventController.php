@@ -34,6 +34,14 @@ class EventController extends Controller
             ->body($this->form());
     }
 
+    public function edit($id, Content $content)
+    {
+        return $content
+            ->header('自定义事件管理')
+            ->description('编辑')
+            ->body($this->form()->edit($id));
+    }
+
     public function grid()
     {
         $grid = new Grid(new Event);
@@ -46,6 +54,10 @@ class EventController extends Controller
 
         $grid->disableExport();
 
+        $grid->actions(function (Grid\Displayers\Actions $actions) {
+            $actions->disableView();
+        });
+        
         return $grid;
     }
 

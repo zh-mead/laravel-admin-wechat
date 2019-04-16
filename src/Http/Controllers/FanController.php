@@ -35,6 +35,14 @@ class FanController extends Controller
             ->body($this->form());
     }
 
+    public function edit($id, Content $content)
+    {
+        return $content
+            ->header('粉丝管理')
+            ->description('编辑')
+            ->body($this->form()->edit($id));
+    }
+
     public function grid()
     {
         $grid = new Grid(new Fan);
@@ -59,19 +67,18 @@ class FanController extends Controller
 
         $form->display('id', 'ID');
 
-        $form->text('name', '事件名称');
-        $form->text('key', '事件标识');
-        $form->select('type', '事件类型')->options(Event::$eventMap);
-        $form->select('reply_type', '回复类型')->options(Event::$replayTypeMap);
-        $form->textarea('body', '事件内容');
-        $form->radio('body','编辑')->options(Event::$eventMap);
-
-        $form->display('created_at', 'Created At');
-        $form->display('updated_at', 'Updated At');
-
-        $form->disableCreatingCheck();
-        $form->disableEditingCheck();
+        $form->text('openid', 'Openid')->disable();
+        $form->text('nickname', '昵称')->disable();
+        $form->text('name', '姓名');
+        $form->email('email', '邮箱');
+        
         $form->disableViewCheck();
+        $form->disableEditingCheck();
+        $form->disableCreatingCheck();
+        $form->tools(function (Form\Tools $tools) {
+            $tools->disableDelete();
+            $tools->disableView();
+        });
 
         return $form;
     }
